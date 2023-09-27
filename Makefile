@@ -15,7 +15,7 @@
 MAKE = make
 CP = cp
 RM = rm
-INSTALL = install -c -s
+INSTALL = install -D -s
 
 INSTROOT = /usr
 LOCALBINDIR = ${INSTROOT}/bin

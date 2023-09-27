@@ -13,7 +13,11 @@ It's as simple as
 make
 make install
 ```
-NOTE: it will install files in `/usr/bin` and `/usr/share/man`, edit `Makefile` if those paths do not suit your needs.
+NOTE: by default it will install files in `/usr/bin` and `/usr/share/man`, use
+```
+make install INSTROOT=/your/path
+```
+if those paths do not suit your needs. Variables `LOCALBINDIR` and `MAN1DIR` are also available.
 Of course, feel free to add proper autoconf/automake support if you can. That would be a great addition.
 
 ## Usage
@@ -29,6 +33,7 @@ will tell you everything you need to use it.
 Thanks go to the original authors of MetaMail, and the Debian maintainers who did most of the work. You can find their original versions here:
 - [MetaMail original source](http://ftp.funet.fi/pub/unix/mail/metamail/)
 - [Debian BIG patch](http://tux.rainside.sk/gentoo/distfiles/1b/metamail_2.7-53.diff.gz)
+
 ... but the latter link may soon vanish. When it happens, try to search metamail_2.7-53.diff.gz on Gentoo mirrors if you are interested in the patch.
 I extracted mimencode source with all needed library calls, ANSIfied the old K&R C code adding prototypes etc, and added a few very simple Makefiles. 
 
