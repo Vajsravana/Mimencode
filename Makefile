@@ -13,9 +13,8 @@
 #
 
 MAKE = make
-CP = cp
 RM = rm
-INSTALL = install -D -s
+INSTALL = install -D
 
 INSTROOT = /usr
 LOCALBINDIR = ${INSTROOT}/bin
@@ -35,7 +34,7 @@ install: all
 	do \
 	    target=$(MAN1DIR)/mimencode.1; \
 	    echo "installing man page $$target";\
-	    ${CP} $$file $$target; \
+	    ${INSTALL} -m 0644 $$file $$target; \
 	done)
 
 uninstall:
